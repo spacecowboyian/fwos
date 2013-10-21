@@ -1,0 +1,166 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+@import 'compass';
+@import 'responsive';
+
+
+
+$black: rgba(20,20,20,1);
+$halfBlack: rgba($black,.5);
+$white: white;
+$halfWhite: rgba($white,.5);
+$almostWhite: rgba($black,.04);
+
+.shirtBlock {
+    background: $black;
+    color: $white;
+    border:1px solid $white;
+    text-align: right;
+}
+
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    text-transform:uppercase;
+    background:$white;
+}
+
+a{
+    text-decoration:none;
+    color:$black;
+    border-bottom:1px solid $black;
+}
+
+header{
+    padding:0 10px;
+    h1{
+        font-size:3em;
+        line-height:1em;
+        text-align:right;
+        margin:10px 0;
+    }
+}
+
+section{
+    padding:0 10px;
+    margin-left:330px;
+
+    h2{
+        background:$halfWhite;
+        padding:10px;
+        margin:5px 0;
+    }
+}
+
+.creator{
+    background-image:url('../images/shirt-blank-black.png');
+    background-size:700px auto;
+    background-position:-220px 0;
+    background-repeat:no-repeat;
+    height:1000px;
+    width:500px;
+    margin:0;
+    position:fixed;
+    top:10px;
+    z-index:-3;
+}
+
+.shirt-form {
+    display:block;
+    position:fixed;
+    z-index:999;
+    width:270px;
+    top:160px;
+    textarea{
+        display:block;
+        width:270px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        border:none;
+        @include box-shadow(none);
+        font-size:50px;
+        line-height:42px;
+        height:200px;
+        background:none;
+        text-align:right;
+        vertical-align:middle;
+        padding:0;
+        color:$white;
+
+        &:active,&:focus{
+            @include box-shadow(none);
+            outline:none;
+            &::placeholder{
+                color:red;
+            }
+
+        }
+
+        &::placeholder{
+            color:$white;
+        }
+    }
+}
+
+.sotm {
+    margin-top:20px;
+    .shirt{
+        @extend .shirtBlock;
+        font-size: 80px;
+        line-height:65px;
+        padding:50px 0;
+        @include box-shadow(2px 2px 10px rgba($black,.4));
+
+        p {
+            margin:0 0 0 0;
+            padding:0 20px;
+        }
+    }
+}
+
+article.shirts div{
+    @extend .shirtBlock;
+    font-size: 20px;
+    padding:15px 0;
+
+    p {
+        margin:0 0 0 0;
+        padding:0 10px;
+    }
+}
+
+footer {
+    background:$almostWhite;
+    padding: 20px;
+    text-align:right;
+
+    margin-top:30px;
+}
+
+@media screen and (max-width: 720px) {
+    section {
+        margin-left:0;
+    }
+    .creator,.shirt-form {
+        display:none;
+    }
+}
+
+@media all and (min-width: 960px) {
+    header {
+        h1 {
+            font-size:4em;
+        }
+    }
+}
