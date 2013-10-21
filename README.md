@@ -3,8 +3,8 @@ fwos
 
 Four Words On Shirts - UI
 
-npm install
+$ npm install
 
-grunt server
+$ grunt server
 
 tada!
