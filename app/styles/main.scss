@@ -4,7 +4,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'compass';
 @import 'responsive';
-
+@import 'mixins/triangle';
 
 
 $black: rgba(20,20,20,1);
@@ -12,6 +12,9 @@ $halfBlack: rgba($black,.5);
 $white: white;
 $halfWhite: rgba($white,.5);
 $almostWhite: rgba($black,.04);
+
+$green: green;
+$red: red;
 
 .shirtBlock {
     background: $black;
@@ -30,16 +33,34 @@ $almostWhite: rgba($black,.04);
 
 /* Space out content a bit */
 body {
-    margin:0;
+    margin:0; 
+    background:$white;
+}
+
+* {
     font-family: 'Montserrat', sans-serif;
     text-transform:uppercase;
-    background:$white;
+
+    &.hide {
+        display:none;
+    }
 }
 
 a{
     text-decoration:none;
     color:$black;
     border-bottom:1px solid $black;
+}
+
+button {
+    background:$green;
+    border:none;
+    padding:10px;
+    color:$white;
+
+    &.neg {
+        background:$red;
+    }
 }
 
 header{
@@ -82,7 +103,23 @@ section{
     z-index:999;
     width:270px;
     top:160px;
-    textarea{
+
+    .start{
+        color:$green;
+        border-bottom:0;
+        display:block;
+        position:absolute;
+        margin-left:50px;
+        margin-top:9px;
+        &:after {
+            display:inline-block;
+            content:"";
+            width:0;
+            height:0;
+            @include triangle("right",$green,5px);
+        }
+    }
+    input[type=text]{
         display:block;
         width:270px;
         font-family: 'Montserrat', sans-serif;
@@ -90,8 +127,8 @@ section{
         border:none;
         @include box-shadow(none);
         font-size:50px;
-        line-height:42px;
-        height:200px;
+        height:56px;
+        margin-top:-11px;
         background:none;
         text-align:right;
         vertical-align:middle;
@@ -110,6 +147,10 @@ section{
         &::placeholder{
             color:$white;
         }
+    }
+
+    button {
+        float:right;
     }
 }
 

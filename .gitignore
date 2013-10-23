@@ -4,3 +4,4 @@ test
 .sass-cache
 .tmp
 .DS_Store
+/bower_components/
