@@ -139,7 +139,7 @@ section{
             @include box-shadow(none);
             outline:none;
             &::placeholder{
-                color:red;
+                color:$red;
             }
 
         }
