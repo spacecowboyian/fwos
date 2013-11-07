@@ -29,7 +29,7 @@ define(['backbone'], function(Backbone) {
             if (keycode == 8 && $(e.currentTarget).val().length < 1){
                 $(e.currentTarget).prev('input').focus();
             }
-
+            //if full and valid
         }
     });
 

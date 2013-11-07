@@ -1,0 +1,72 @@
+.login {
+
+    section.login-container{
+        padding:23% 0;
+        width:320px;
+        margin:0 auto;
+        text-align:center;
+
+        h1 {
+            font-size:20px;
+        }
+    }
+
+    [class*='btn-signin']{
+        display:block;
+        @include border-radius(3px);
+        border:1px solid rgba($black,.2);
+        width:230px;
+        color:$white;
+        background:#ccc;
+        overflow:hidden;
+        margin:10px auto;
+        @include box-shadow(-2px -2px 7px rgba($black,.1) inset);
+
+        .icon {
+            float:left;
+            width:35px;
+            height:35px;
+            border-right:1px solid rgba($white,.2);
+            background-repeat:no-repeat;
+            background-position:50% 50%;
+        }
+        .text {
+            float:left;
+            border-left:1px solid rgba($black, .1);
+            padding:10px 15px;
+            font-size:12px;
+            width:163px;
+        }
+
+        &:hover{
+            .icon,.text{
+                background-color:rgba($white,.2);
+            }
+        }
+
+        &.btn-signin-facebook{
+            background:#3b5998;
+
+            .icon{
+                background-image:url(../images/facebook-24.png);
+            }
+        }
+
+        &.btn-signin-twitter{
+            background:#00acee;
+
+            .icon{
+                background-image:url(../images/twitter-24.png);
+            }
+        }
+    }
+
+    footer{
+        position:fixed;
+        bottom:0;
+        width:94%;
+        padding:20px 3%;
+    }
+
+}
+

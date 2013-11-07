@@ -2,16 +2,19 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
-@import 'compass';
-@import 'responsive';
-@import 'mixins/triangle';
-
-
 $black: rgba(20,20,20,1);
 $halfBlack: rgba($black,.5);
 $white: white;
 $halfWhite: rgba($white,.5);
 $almostWhite: rgba($black,.04);
+
+@import 'compass';
+@import 'responsive';
+@import 'mixins/triangle';
+@import 'login';
+
+
+
 
 $green: green;
 $red: red;
@@ -19,7 +22,7 @@ $red: red;
 .shirtBlock {
     background: $black;
     color: $white;
-    border:1px solid $white;
+    border:5px solid $white;
     text-align: right;
 }
 
@@ -53,14 +56,46 @@ a{
 }
 
 button {
+    display:inline-block;
     background:$green;
     border:none;
     padding:10px;
     color:$white;
+    @include border-radius(3px);
 
     &.neg {
         background:$red;
     }
+}
+
+.btn-sign-in{
+    @extend button;
+    float:right;
+    margin:10px 20px 0 0;
+
+    i {
+        display:inline-block;
+        width:16px;
+        height:16px;
+        background-repeat:no-repeat;
+        margin-left:3px;
+
+        &.icon-tw-white{
+            background-image:url(../images/twitter-16.png);
+            background-position:0px 2px;
+        }
+
+        &.icon-fb-white{
+            background-image:url(../images/facebook-16.png);
+            background-position:0px 1px;
+        }
+    }
+}
+
+.container {
+    max-width:1200px;
+    margin-left:330px;
+    padding:0 10px;
 }
 
 header{
@@ -75,7 +110,6 @@ header{
 
 section{
     padding:0 10px;
-    margin-left:330px;
 
     h2{
         background:$halfWhite;
@@ -190,12 +224,17 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
-    section {
+    .btn-sign-in{
+        margin-right:15px;
+    }
+    .container {
         margin-left:0;
+        padding:0;
     }
     .creator,.shirt-form {
         display:none;
     }
+
 }
 
 @media all and (min-width: 960px) {
