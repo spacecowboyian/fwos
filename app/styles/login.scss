@@ -21,6 +21,12 @@
         overflow:hidden;
         margin:10px auto;
         @include box-shadow(-2px -2px 7px rgba($black,.1) inset);
+        text-align:left;
+        
+        .icon,.text{
+            background-color:rgba($white,0);
+            @include transition(background-color .5s);
+        }
 
         .icon {
             float:left;
