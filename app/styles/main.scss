@@ -71,6 +71,10 @@ button {
     }
 }
 
+.quiet{
+    color:rgba($black,.3);
+}
+
 .btn-sign-in{
     @extend button;
     float:right;
