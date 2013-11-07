@@ -11,9 +11,12 @@ $almostWhite: rgba($black,.04);
 @import 'compass';
 @import 'responsive';
 @import 'mixins/triangle';
+
+$icons-spacing: 20px;
+@import '../images/icons/*.png';
+@include all-icons-sprites;
+
 @import 'login';
-
-
 
 
 $green: green;
@@ -78,16 +81,17 @@ button {
         width:16px;
         height:16px;
         background-repeat:no-repeat;
-        margin-left:3px;
+        margin: 0 0 0 3px;
+
 
         &.icon-tw-white{
-            background-image:url(../images/twitter-16.png);
-            background-position:0px 2px;
+            @extend .icons-twitter-16;
+            @include sprite-background-position($icons-sprites, twitter-16, 0, 2px);
         }
 
         &.icon-fb-white{
-            background-image:url(../images/facebook-16.png);
-            background-position:0px 1px;
+            @extend .icons-facebook-16;
+            @include sprite-background-position($icons-sprites, facebook-16, 0, 1px);
         }
     }
 }

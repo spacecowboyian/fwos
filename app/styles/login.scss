@@ -54,7 +54,8 @@
             background:#3b5998;
 
             .icon{
-                background-image:url(../images/facebook-24.png);
+                @extend .icons-facebook-24;
+                @include sprite-background-position($icons-sprites, facebook-24, 5px, 6px);
             }
         }
 
@@ -62,7 +63,8 @@
             background:#00acee;
 
             .icon{
-                background-image:url(../images/twitter-24.png);
+                @extend .icons-twitter-24;
+                @include sprite-background-position($icons-sprites, twitter-24, 6px, 5px);
             }
         }
     }
