@@ -23,10 +23,10 @@ define(['backbone'], function(Backbone) {
         formSpace : function (e) {
             var keycode = e.which;
             console.log(keycode);
-            if (keycode == 32 || keycode == 13){
+            if (keycode === 32 || keycode === 13){
                 $(e.currentTarget).next('input').focus();
             }
-            if (keycode == 8 && $(e.currentTarget).val().length < 1){
+            if (keycode === 8 && $(e.currentTarget).val().length < 1){
                 $(e.currentTarget).prev('input').focus();
             }
             //if full and valid
