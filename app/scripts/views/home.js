@@ -1,9 +1,14 @@
-define(['backbone'], function(Backbone) {
+define(['backbone','leanModal'], function(Backbone, leanModal) {
     var HomeView = Backbone.View.extend({
-        el:'.shirt-form',
+        el:'body',
 
         initialize: function() {
             console.log( 'Home page view' );
+            $('[data-target="sign-in"]').leanModal({
+                top : 200,
+                overlay : 0.5,
+                closeButton: ".modal-close"
+            });
         },
 
         events: {
@@ -22,7 +27,6 @@ define(['backbone'], function(Backbone) {
 
         formSpace : function (e) {
             var keycode = e.which;
-            console.log(keycode);
             if (keycode === 32 || keycode === 13){
                 $(e.currentTarget).next('input').focus();
             }

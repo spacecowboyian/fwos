@@ -41,7 +41,7 @@
                 <button type="submit" class="hide">Submit Your Four Words</button>
             </form>
         </div>
-        <a href="login.html" class="btn-sign-in">Sign In <i class="icon-tw-white"></i><i class="icon-fb-white"></i></a>
+        <a href="#sign-in" data-target="sign-in" class="btn-sign-in">Sign In <i class="icon-tw-white"></i><i class="icon-fb-white"></i></a>
         <div class="container">
             <!-- <section class="sotm">
                 <article id="row5">
@@ -209,9 +209,29 @@
                         <p>Shirts</p>
                     </div>
                 </article>
-            </section>
-            
+            </section>  
         </div>
+
+        <section id="sign-in" style="display:none;" class="login-container modal">
+            <a class="modal-close" href="#">&times;</a>
+            <h1>Four Words On Shirts</h1>
+            <a href="" data-target="signin-twitter" class="btn-signin-twitter">
+                <div class="icon"></div>
+                <div class="text">
+                    Sign in with Twitter
+                </div>
+            </a>
+            <a href="" data-target="signin-facebook" class="btn-signin-facebook">
+                <div class="icon"></div>
+                <div class="text">
+                    Sign in with Facebook
+                </div>
+            </a>
+            <p class="quiet">
+                Yes, these are your only options for now.</br>
+                No, you may not complain.
+            </p>
+        </section>
         
 
         <footer>

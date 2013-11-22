@@ -75,6 +75,35 @@ button {
     color:rgba($black,.3);
 }
 
+#lean_overlay {
+    position: fixed;
+    z-index:1003;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+
+.modal{
+    border:5px solid $black;
+    .modal-close{
+        position:absolute;
+        right:-4px;
+        top:-4px;
+        display:block;
+        font-size:14px;
+        background:$black;
+        color:$white;
+        width:20px;
+        height:20px;
+        line-height:20px;
+        text-align:center;
+        border-bottom:none;
+    }
+}
+
 .btn-sign-in{
     @extend button;
     float:right;

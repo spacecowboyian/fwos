@@ -5,3 +5,5 @@ test
 .tmp
 .DS_Store
 /bower_components/
+
+bower_components/
