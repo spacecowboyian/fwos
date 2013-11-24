@@ -13,7 +13,7 @@ $almostWhite: rgba($black,.04);
 @import 'mixins/triangle';
 
 $icons-spacing: 20px;
-@import '../images/icons/*.png';
+@import 'icons/*.png';
 @include all-icons-sprites;
 
 @import 'login';

@@ -5,7 +5,9 @@
     "requirejs": "latest",
     "jquery": "latest",
     "backbone-amd": "latest",
-    "underscore-amd": "latest"
+    "underscore-amd": "latest",
+    "jquery-leanmodal": "latest",
+    "momentjs": "latest"
   },
   "devDependencies": {}
 }
