@@ -71,6 +71,10 @@ button {
     }
 }
 
+a.btn{
+    @extend button;
+}
+
 .quiet{
     color:rgba($black,.3);
 }
@@ -104,10 +108,33 @@ button {
     }
 }
 
+nav{
+    background:$black;
+    ul{
+        padding:5px;
+        margin:0;
+        overflow:hidden;
+        li{
+            list-style: none;
+            float:left;
+            margin:0 5px;
+
+            a{
+                border:none;
+                display: block;
+                padding:5px;
+                background:$white;
+            }
+        }
+    }
+}
+
 .btn-sign-in{
     @extend button;
-    float:right;
-    margin:10px 20px 0 0;
+    background:$halfBlack;
+    position: absolute;
+    right:0;
+    margin:5px 5px 0 0;
 
     i {
         display:inline-block;
@@ -275,7 +302,7 @@ footer {
     background:$almostWhite;
     padding: 20px;
     text-align:right;
-    margin-top:30px;
+    margin-top:0;
     font-size:12px;
 }
 
@@ -287,7 +314,7 @@ footer {
         margin-left:0;
         padding:0;
     }
-    .creator,.shirt-form {
+    .creator,.shirt-form,nav {
         display:none;
     }
 
@@ -300,3 +327,5 @@ footer {
         }
     }
 }
+
+@import 'item';

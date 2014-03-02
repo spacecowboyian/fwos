@@ -1,0 +1,115 @@
+body.item{
+	.container{
+		margin:0;
+	}
+	.item-display{
+		@extend .creator;
+		position:relative;
+		top:0;
+		background-position:0 0;
+		width:85%;
+		background-size:100%;
+		margin:0 auto;
+		max-height: 700px;
+		overflow: hidden;
+
+	}
+}
+
+@media screen and (max-width: 720px) {
+	body.item{
+		.item-display{
+			display: block;
+			width:100%;
+			background-size:750px;
+			background-position:55% 10%;
+
+			.item-container{
+				width:300px;
+				margin:140px auto;
+
+				.words{
+					color:$white;
+					text-align: right;
+
+					h1{
+						margin:0;
+					}
+
+					span{
+						display: block;
+						font-size:1.6em;
+						line-height: .9em;
+
+						&.hide{
+							display: none;
+						}
+
+						&.domain{
+							font-size:5px;
+							line-height:2em;
+						}
+					}
+				}
+
+				.controls{
+					overflow: hidden;
+					position:fixed;
+					bottom:40px;
+					.color{
+						input{
+							display:none;
+						}
+
+						.swatch{
+							display:block;
+							float:left;
+							width:40px;
+							height:40px;
+							color:transparent;
+							background:$black;
+							margin-right:5px;
+							border: 3px solid transparent;
+						}
+
+						.swatch_black,.swatch_white{
+							@extend .swatch;
+						}
+
+						.swatch_black{
+							&.active{
+								border-color:$white;
+							}
+						}
+
+						.swatch_white{
+							background:$white;
+							&.active{
+								border-color:$black;
+							}
+						}
+					}
+					.size{
+						float:left;
+
+						select{
+							width:198px;
+							border:0;
+							padding:14px 10px 13px;
+							font-size:1em;
+							margin:0;
+							@include border-radius(0px);
+							-webkit-appearance: none;
+						}
+					}
+						.btn.buy{
+						width:281px;
+						margin-top:10px;
+						text-align: center;
+						font-size:1.3em;
+					}
+				}
+			}
+		}
+	}
+}

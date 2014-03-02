@@ -14,29 +14,49 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
-    <body>
+    <body class="item">
+        <a href="#sign-in" data-target="sign-in" class="btn-sign-in">Sign In <i class="icon-tw-white"></i><i class="icon-fb-white"></i></a>
         <nav>
             <div class="center">
                 <ul>
                     <li><a href="">SO HOT RIGHT NOW</a></li>
                     <li><a href="">THE BEST SHIRT EVER</a></li>
                     <li><a href="">SUPPORT YOUR LOCAL DEVELOPER</a></li>
-                    <li><a href=""></a></li>
                 </ul>
             </div>
         </nav>
 
         <!-- Header -->
 
-        <section class="creator">
-
-        </section>
-        
-        <a href="#sign-in" data-target="sign-in" class="btn-sign-in">Sign In <i class="icon-tw-white"></i><i class="icon-fb-white"></i></a>
         <div class="container">
-            <section>
-                
-            </section>  
+            <section class="item-display">
+                <div class="item-container">
+                    <div class="words">
+                        <h1>
+                            <span>Alphabet</span>
+                            <span>Motorcycle</span>
+                            <span>Symphonic</span>
+                            <span>Numerical</span>
+                            <span class="hide">Shirt</span>
+                        </h1>
+                        <span class="domain">www.fourwordsonshirts.com</span>
+                    </div>
+                    <div class="controls">
+                        <div class="color">
+                            <input type="radio" name="color" value="black"><span class="swatch_black active" data-target="swatch-black">Black</span>
+                            <input type="radio" name="color" value="white"><span class="swatch_white" data-target="swatch-white">White</span>
+                        </div>
+                        <div class="size">
+                            <select name="size" id="">
+                                <option value="">What Size You Is?</option>
+                                <option value="s">Men's Small</option>
+                                <option value="m">Men's Medium</option>
+                            </select>
+                        </div>
+                        <a href="" class="btn buy">you must have this</a>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <section id="sign-in" style="display:none;" class="login-container modal">
