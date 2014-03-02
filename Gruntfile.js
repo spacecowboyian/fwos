@@ -122,14 +122,15 @@
                     relativeAssets: false,
                     assetCacheBuster: false
                 },
+                server: {
+                    options: {
+                        debugInfo: true,
+                        generatedImagesDir: '<%= yeoman.app %>/images/generated'
+                    }
+                },
                 dist: {
                     options: {
                         generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-                    }
-                },
-                server: {
-                    options: {
-                        debugInfo: true
                     }
                 }
             },
