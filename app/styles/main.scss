@@ -129,6 +129,25 @@ button {
     }
 }
 
+.user-info{
+    float:right;
+    margin:10px 20px 0 0;
+    border-bottom:none;
+    display:block;
+    line-height:15px;
+
+    .avatar {
+        width:30px;
+        float:left;
+    }
+    span{
+        display:block;
+        float:left;
+        padding:8px 10px 0 0;
+        font-size:12px;
+    }
+}
+
 .container {
     max-width:1200px;
     margin-left:330px;
