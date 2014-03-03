@@ -1,18 +1,134 @@
 body.item{
 	.container{
 		margin:0;
+		padding:0;
+		max-width: auto;
 	}
 	.item-display{
 		@extend .creator;
 		position:relative;
 		top:0;
-		background-position:0 0;
-		width:85%;
-		background-size:100%;
+		width:100%;
+		background-size:1100px;
+		background-position:55% 5%;
 		margin:0 auto;
-		max-height: 700px;
+		max-height: 650px;
 		overflow: hidden;
+		z-index: 0;
 
+		.item-container{
+			width:500px;
+			margin:180px auto 0;
+			.words{
+				color:$white;
+				text-align: right;
+
+				h1{
+					margin:0;
+				}
+
+				span{
+					display: block;
+					font-size:2.5em;
+					line-height: .9em;
+
+					&.hide{
+						display: none;
+					}
+
+					&.domain{
+						font-size:5px;
+						line-height:2em;
+					}
+				}
+			}
+
+			.controls{
+				overflow: hidden;
+				position:fixed;
+				left:0;
+				bottom:100px;
+				width:100%;
+				background:$halfBlack;
+				z-index: 9999;
+
+				.controls-wrapper{
+					text-align: center;
+					margin:0 auto;
+					div {
+						display:inline-block;
+					}
+
+					input,select{
+						border:0;
+						padding:15px 10px 14px 10px;
+						font-size:1em;
+						margin:0;
+						@include border-radius(0px);
+						-webkit-appearance: none;
+						text-align:center;
+					}
+
+				}
+				.quantity{
+					input{
+						width:35px;
+						padding-left:17px;
+						padding-right:2px;
+						text-align: center;
+					}
+				}
+				.color{
+					input{
+						display:none;
+					}
+
+					.swatch{
+						display:inline-block;
+						padding:0 10px;
+						height:42px;
+						line-height: 43px;
+						background:$black;
+						color:$white;
+						border: 3px solid transparent;
+						font-size:1em;
+					}
+
+					.swatch_black,.swatch_white{
+						@extend .swatch;
+					}
+
+					.swatch_white{
+						background:$white;
+						color:$black;
+					}
+				}
+				.size{
+					select{
+						width:100px;
+						background:$halfWhite;
+
+						&.active{
+							background:$white;
+						}
+					}
+				}
+				.btn.buy{
+					text-align: center;
+					font-size:1em;
+					height:28px;
+					line-height:29px;
+					@include border-radius(0px);
+					background:$halfWhite;
+					color:$black;
+
+					&.active{
+						color:$white;
+						background:$green;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -29,84 +145,40 @@ body.item{
 				margin:140px auto;
 
 				.words{
-					color:$white;
-					text-align: right;
-
-					h1{
-						margin:0;
-					}
-
 					span{
-						display: block;
-						font-size:1.6em;
-						line-height: .9em;
-
-						&.hide{
-							display: none;
-						}
-
-						&.domain{
-							font-size:5px;
-							line-height:2em;
-						}
+						font-size: 1.6em;
 					}
 				}
+			}
+		}
+	}
+}
 
-				.controls{
-					overflow: hidden;
-					position:fixed;
-					bottom:40px;
-					.color{
-						input{
-							display:none;
-						}
+@media screen and (max-width: 480px) {
+	body.item{
+		.item-display{
+			display: block;
+			width:100%;
+			background-size:600px;
+			background-position:55% 15%;
+			max-height: 480px;
+			.item-container{
+				width:250px;
+				margin:100px auto;
 
-						.swatch{
-							display:block;
-							float:left;
-							width:40px;
-							height:40px;
-							color:transparent;
-							background:$black;
-							margin-right:5px;
-							border: 3px solid transparent;
-						}
-
-						.swatch_black,.swatch_white{
-							@extend .swatch;
-						}
-
-						.swatch_black{
-							&.active{
-								border-color:$white;
-							}
-						}
-
-						.swatch_white{
-							background:$white;
-							&.active{
-								border-color:$black;
-							}
-						}
+				.words{
+					span{
+						font-size: 1.3em;
 					}
-					.size{
-						float:left;
-
+				}
+				.controls .controls-wrapper{
+					div.mob-wrap{
+						margin-top:5px;
+						display:block;
 						select{
-							width:198px;
-							border:0;
-							padding:14px 10px 13px;
-							font-size:1em;
-							margin:0;
-							@include border-radius(0px);
-							-webkit-appearance: none;
+							text-align:center;
+							width:189px;
 						}
-					}
-						.btn.buy{
-						width:281px;
-						margin-top:10px;
-						text-align: center;
-						font-size:1.3em;
 					}
 				}
 			}

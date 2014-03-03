@@ -39,21 +39,36 @@
                             <span>Numerical</span>
                             <span class="hide">Shirt</span>
                         </h1>
-                        <span class="domain">www.fourwordsonshirts.com</span>
                     </div>
                     <div class="controls">
-                        <div class="color">
-                            <input type="radio" name="color" value="black"><span class="swatch_black active" data-target="swatch-black">Black</span>
-                            <input type="radio" name="color" value="white"><span class="swatch_white" data-target="swatch-white">White</span>
+                        <div class="controls-wrapper">
+                            <div class="quantity">
+                                <input type="number" name="quantity" min="1" max="50" value="1">
+                            </div>
+                            <div class="color">
+                                <input type="hidden" name="color" value="black"><span class="swatch_black" data-target="swatch-black">Black</span>
+                            </div>
+                            <div class="sex">
+                                <select name="sex" id="">
+                                    <option value="m">Men's</option>
+                                    <option value="w">Women's</option>
+                                </select>
+                            </div>
+                            <div class="mob-wrap">
+                                <div class="size">
+                                    <select name="size" id="">
+                                        <option value="">Size</option>
+                                        <option value="s">Small</option>
+                                        <option value="m">Med</option>
+                                        <option value="l">Large</option>
+                                        <option value="xl">XL</option>
+                                        <option value="2x">2XL</option>
+                                        <option value="3x">3XL</option>
+                                    </select>
+                                </div>
+                                <a href="" class="btn buy">buy</a>
+                            </div>
                         </div>
-                        <div class="size">
-                            <select name="size" id="">
-                                <option value="">What Size You Is?</option>
-                                <option value="s">Men's Small</option>
-                                <option value="m">Men's Medium</option>
-                            </select>
-                        </div>
-                        <a href="" class="btn buy">you must have this</a>
                     </div>
                 </div>
             </section>
@@ -83,11 +98,8 @@
 
         <footer>
             <div class="center">
-                <section id="company">
-                    <a href="http://www.fourwordsonshirts.com">F.W.O.S.</a>
-                </section>
                 <section id="meta">
-                    <div>Copyright &copy; 2012 F.W.O.S. All rights reserved. </div>
+                    <div>Copyright &copy; 2014 <a href="http://www.fourwordsonshirts.com">F.W.O.S.</a> All rights reserved. </div>
                     <div>
                         <a href="http://www.facebook.com/fwoshirts">Facebook</a>
                         &nbsp;|&nbsp;

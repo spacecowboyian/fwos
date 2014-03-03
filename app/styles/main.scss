@@ -58,6 +58,13 @@ a{
     border-bottom:1px solid $black;
 }
 
+input,select{
+    &:active, &:focus{
+        outline:none;
+        @inlcude box-shadow(none);
+    }
+}
+
 button {
     display:inline-block;
     background:$green;
@@ -176,7 +183,6 @@ nav{
 }
 
 .container {
-    max-width:1200px;
     margin-left:330px;
     padding:0 10px;
 }
