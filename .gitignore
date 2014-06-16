@@ -4,6 +4,7 @@ test
 .sass-cache
 .tmp
 .DS_Store
+npm-debug.log
 /bower_components/
 
 bower_components/
