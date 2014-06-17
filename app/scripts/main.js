@@ -14,7 +14,7 @@ require.config({
     }
 });
 
-require(['fb']);
+//require(['fb']);
 
 require(['scripts/views/home'], function(HomeView) {
     new HomeView();
