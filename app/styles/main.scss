@@ -60,7 +60,6 @@ a{
 
 input,select{
     &:active, &:focus{
-        outline:none;
         @include box-shadow(none);
     }
 }

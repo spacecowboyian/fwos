@@ -152,12 +152,12 @@
             /*concat: {
                 dist: {}
             },*/
-            'bower-install': {
-                app: {
-                    html: '<%= yeoman.app %>/index.html',
-                    ignorePath: '<%= yeoman.app %>/'
-                }
-            },
+            // 'bower-install': {
+            //     app: {
+            //         html: '<%= yeoman.app %>/index.html',
+            //         ignorePath: '<%= yeoman.app %>/'
+            //     }
+            // },
             // not enabled since usemin task does concat and uglify
             // check index.html to edit your build targets
             // enable this task if you prefer defining your build targets here
