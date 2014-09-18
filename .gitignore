@@ -6,5 +6,5 @@ test
 .DS_Store
 npm-debug.log
 /bower_components/
-
 bower_components/
+app/bower_components/**
