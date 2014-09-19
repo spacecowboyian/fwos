@@ -7,7 +7,8 @@
     "backbone-amd": "latest",
     "underscore-amd": "latest",
     "jquery-leanmodal": "latest",
-    "momentjs": "latest"
+    "momentjs": "latest",
+    "FitText.js": "latest"
   },
   "devDependencies": {}
 }

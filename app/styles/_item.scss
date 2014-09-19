@@ -1,35 +1,52 @@
 body.item{
+	overflow:hidden;
+
 	.container{
 		margin:0;
 		padding:0;
 		max-width: auto;
+		min-width: 320px;
 	}
 	.item-display{
 		@extend .creator;
-		position:relative;
+		position:absolute;
 		top:0;
+		bottom:0;
 		width:100%;
-		background-size:1100px;
+		background-size:120%;
 		background-position:55% 5%;
 		margin:0 auto;
-		max-height: 650px;
 		overflow: hidden;
 		z-index: 0;
 
 		.item-container{
-			width:500px;
-			margin:180px auto 0;
+			position:absolute;
+			right:23.5vw;
+			top:22.3vw;
+
+			
+
+
 			.words{
 				color:$white;
 				text-align: right;
 
-				h1{
+				h2{
 					margin:0;
+					padding:0;
+					background:none;
+				}
+
+				h3{
+					margin:1px 0 0 0;
+					padding:0;
+					background:none;
+					font-size: 0.6vw;
 				}
 
 				span{
 					display: block;
-					font-size:2.5em;
+					font-size:6.2vw;
 					line-height: .9em;
 
 					&.hide{
@@ -47,9 +64,9 @@ body.item{
 				overflow: hidden;
 				position:fixed;
 				left:0;
-				bottom:100px;
+				bottom:0;
 				width:100%;
-				background:$halfBlack;
+				background:$black;
 				z-index: 9999;
 
 				.controls-wrapper{
@@ -132,21 +149,31 @@ body.item{
 	}
 }
 
-@media screen and (max-width: 720px) {
+@media all and (max-width: 720px) {
 	body.item{
 		.item-display{
 			display: block;
-			width:100%;
-			background-size:750px;
-			background-position:55% 10%;
+		}
+	}
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+	body.item{
+		.item-display{
+			margin:-10px 0 0 0px;
+			background-size:80%;
+			background-position:-20px 0;
 
 			.item-container{
-				width:300px;
-				margin:140px auto;
-
+				right:47.5vw;
+				top:17.5vw;
 				.words{
 					span{
-						font-size: 1.6em;
+						font-size: 4.2vw;
+					}
+
+					h3{
+						font-size: 0.35vw;
 					}
 				}
 			}
@@ -154,31 +181,53 @@ body.item{
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px){
 	body.item{
 		.item-display{
-			display: block;
-			width:100%;
-			background-size:600px;
-			background-position:55% 15%;
-			max-height: 480px;
-			.item-container{
-				width:250px;
-				margin:100px auto;
+			margin:40px 0 0 0;
+			background-size:130%;
+			background-position:-130px 0;
 
-				.words{
+			.item-container{
+				right:35.5vw;
+				top:28.5vw;
+				.words {
 					span{
-						font-size: 1.3em;
+						font-size: 7.2vw;
+					}
+
+					h3{
+						font-size: 0.6vw;
 					}
 				}
-				.controls .controls-wrapper{
-					div.mob-wrap{
-						margin-top:5px;
-						display:block;
-						select{
-							text-align:center;
-							width:189px;
-						}
+			}
+		}
+	}
+}
+
+@media (orientation: portrait) and (max-width: 360px){
+	body.item{
+		.item-display{
+			.item-container{
+				right:46.5vw;
+			}
+		}
+	}
+}
+
+@media (max-width: 320px){
+	body.item{
+		overflow: auto;
+		.item-display{
+			width: 320px;
+			position:relative;
+
+			.item-container{
+				right:150px;
+				top:95px;
+				.words{
+					span{
+						font-size: 1em;
 					}
 				}
 			}

@@ -14,6 +14,7 @@ $almostWhite: rgba($black,.04);
 
 $icons-spacing: 20px;
 @import 'icons/*.png';
+/* stopping silly sass highlighting */
 @include all-icons-sprites;
 
 @import 'login';
@@ -26,9 +27,9 @@ $red: red;
     background: $black;
     color: $white;
     border:5px solid $white;
+    border-bottom:none;
     text-align: right;
 }
-
 
 .browsehappy {
     margin: 0.2em 0;
@@ -51,6 +52,8 @@ body {
         display:none;
     }
 }
+
+
 
 a{
     text-decoration:none;
@@ -114,6 +117,20 @@ a.btn{
     }
 }
 
+h1.logo{
+    position:absolute;
+    top:5px;
+    right:5px;
+    font-size: 1.3em;
+    margin:0;
+    width: 100px;
+    line-height: 0.85em;
+
+    a{
+        border-bottom:none;
+    }
+}
+
 nav{
     background:$black;
     ul{
@@ -140,7 +157,8 @@ nav{
     background:$halfBlack;
     position: absolute;
     right:0;
-    margin:5px 5px 0 0;
+    margin:10px 25px 0 0;
+    z-index: 9999;
 
     i {
         display:inline-block;
@@ -306,8 +324,14 @@ section{
 
 article.shirts div{
     @extend .shirtBlock;
-    font-size: 20px;
-    padding:15px 0;
+    margin:0;
+
+    a{
+        display: block;
+        color:$white;
+        padding:15px 0;
+        font-size: 20px;
+    }
 
     p {
         margin:0 0 0 0;
@@ -323,7 +347,7 @@ footer {
     font-size:12px;
 }
 
-@media screen and (max-width: 720px) {
+@media all and (max-width: 720px) {
     .btn-sign-in{
         margin-right:15px;
     }

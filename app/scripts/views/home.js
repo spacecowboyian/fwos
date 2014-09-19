@@ -1,4 +1,4 @@
-define(['backbone','leanModal'], function(Backbone) {
+define(['backbone','leanModal','fitText'], function(Backbone) {
     var HomeView = Backbone.View.extend({
         el:'body',
 
@@ -9,6 +9,8 @@ define(['backbone','leanModal'], function(Backbone) {
                 overlay : 0.5,
                 closeButton: ".modal-close"
             });
+
+            jQuery(".testText").fitText();
         },
 
         events: {
