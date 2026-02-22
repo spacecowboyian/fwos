@@ -13,6 +13,7 @@ export default function Item() {
   const [batch, setBatch] = useState('small');
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState('');
+  const [alignment, setAlignment] = useState('right');
 
   // Apply body classes for CSS styling
   useEffect(() => {
@@ -65,7 +66,7 @@ export default function Item() {
           className="item-display"
           style={{ backgroundImage: shirtBg }}
         >
-          <div className="item-container">
+          <div className={`item-container align-${alignment}`}>
             <div className="words">
               <h2>
                 <span>{w1}</span>
@@ -75,9 +76,37 @@ export default function Item() {
               </h2>
               <h3>fourwordsonshirts.com</h3>
             </div>
+          </div>
 
-            <div className="controls">
+          <div className="controls">
               <div className="controls-wrapper">
+                <div className="align">
+                  <button
+                    type="button"
+                    className={`align-btn${alignment === 'left' ? ' active' : ''}`}
+                    onClick={() => setAlignment('left')}
+                    title="Align left"
+                  >
+                    <i className="fa-solid fa-align-left"></i>
+                  </button>
+                  <button
+                    type="button"
+                    className={`align-btn${alignment === 'center' ? ' active' : ''}`}
+                    onClick={() => setAlignment('center')}
+                    title="Align center"
+                  >
+                    <i className="fa-solid fa-align-center"></i>
+                  </button>
+                  <button
+                    type="button"
+                    className={`align-btn${alignment === 'right' ? ' active' : ''}`}
+                    onClick={() => setAlignment('right')}
+                    title="Align right"
+                  >
+                    <i className="fa-solid fa-align-right"></i>
+                  </button>
+                </div>
+
                 <div className="quantity">
                   <select
                     name="batch"
@@ -146,7 +175,6 @@ export default function Item() {
                 </div>
               </div>
             </div>
-          </div>
         </section>
       </div>
     </>

@@ -839,9 +839,33 @@ body.item .item-display .item-container {
   right: 23.5vw;
   top: 22.3vw;
 }
+body.item .item-display .item-container.align-right {
+  right: 23.5vw;
+  left: auto;
+  transform: none;
+}
+body.item .item-display .item-container.align-center {
+  left: 55%;
+  right: auto;
+  transform: translateX(-50%);
+}
+body.item .item-display .item-container.align-left {
+  left: 20vw;
+  right: auto;
+  transform: none;
+}
 body.item .item-display .item-container .words {
   color: white;
   text-align: right;
+}
+body.item .item-display .item-container.align-right .words {
+  text-align: right;
+}
+body.item .item-display .item-container.align-center .words {
+  text-align: center;
+}
+body.item .item-display .item-container.align-left .words {
+  text-align: left;
 }
 body.item .item-display .item-container .words h2 {
   margin: 0;
@@ -866,23 +890,23 @@ body.item .item-display .item-container .words span.domain {
   font-size: 5px;
   line-height: 2em;
 }
-body.item .item-display .item-container .controls {
+body.item .item-display .controls {
   overflow: hidden;
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100%;
   background: rgb(20, 20, 20);
   z-index: 9999;
 }
-body.item .item-display .item-container .controls .controls-wrapper {
+body.item .item-display .controls .controls-wrapper {
   text-align: center;
   margin: 0 auto;
 }
-body.item .item-display .item-container .controls .controls-wrapper div {
+body.item .item-display .controls .controls-wrapper div {
   display: inline-block;
 }
-body.item .item-display .item-container .controls .controls-wrapper input, body.item .item-display .item-container .controls .controls-wrapper select {
+body.item .item-display .controls .controls-wrapper input, body.item .item-display .controls .controls-wrapper select {
   border: 0;
   padding: 15px 10px 14px 10px;
   font-size: 1em;
@@ -892,22 +916,22 @@ body.item .item-display .item-container .controls .controls-wrapper input, body.
   -webkit-appearance: none;
   text-align: center;
 }
-body.item .item-display .item-container .controls .quantity select {
+body.item .item-display .controls .quantity select {
   background: rgba(255, 255, 255, 0.5);
   color: rgb(20, 20, 20);
   width: auto;
   padding: 15px 8px 14px 8px;
 }
-body.item .item-display .item-container .controls .quantity input {
+body.item .item-display .controls .quantity input {
   width: 35px;
   padding-left: 17px;
   padding-right: 2px;
   text-align: center;
 }
-body.item .item-display .item-container .controls .color input {
+body.item .item-display .controls .color input {
   display: none;
 }
-body.item .item-display .item-container .controls .color .swatch, body.item .item-display .item-container .controls .color .swatch_black, body.item .item-display .item-container .controls .color .swatch_white {
+body.item .item-display .controls .color .swatch, body.item .item-display .controls .color .swatch_black, body.item .item-display .controls .color .swatch_white {
   display: inline-block;
   padding: 0 10px;
   height: 42px;
@@ -917,39 +941,55 @@ body.item .item-display .item-container .controls .color .swatch, body.item .ite
   border: 3px solid transparent;
   font-size: 1em;
 }
-body.item .item-display .item-container .controls .color .swatch_black, body.item .item-display .item-container .controls .color .swatch_white {
+body.item .item-display .controls .color .swatch_black, body.item .item-display .controls .color .swatch_white {
   cursor: pointer;
 }
-body.item .item-display .item-container .controls .color .swatch_white {
+body.item .item-display .controls .color .swatch_white {
   background: white;
   color: rgb(20, 20, 20);
 }
-body.item .item-display .item-container .controls .color .swatch_black.active {
+body.item .item-display .controls .color .swatch_black.active {
   border-color: white;
 }
-body.item .item-display .item-container .controls .color .swatch_white.active {
+body.item .item-display .controls .color .swatch_white.active {
   border-color: rgb(20, 20, 20);
 }
-body.item .item-display .item-container .controls .size select {
+body.item .item-display .controls .size select {
   width: 100px;
   background: rgba(255, 255, 255, 0.5);
 }
-body.item .item-display .item-container .controls .size select.active {
+body.item .item-display .controls .size select.active {
   background: white;
 }
-body.item .item-display .item-container .controls .btn.buy {
+body.item .item-display .controls .btn.buy {
   text-align: center;
   font-size: 1em;
-  height: 28px;
-  line-height: 29px;
+  padding: 15px 10px 14px 10px;
+  height: auto;
+  line-height: normal;
   -webkit-border-radius: 0px;
   border-radius: 0px;
-  background: rgba(255, 255, 255, 0.5);
-  color: rgb(20, 20, 20);
+  background: green;
+  color: white;
 }
-body.item .item-display .item-container .controls .btn.buy.active {
+body.item .item-display .controls .btn.buy.active {
   color: white;
   background: green;
+}
+body.item .item-display .controls .align {
+  display: inline-block;
+}
+body.item .item-display .controls .align .align-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 15px 8px 14px 8px;
+  font-size: 1em;
+  border-radius: 0;
+  cursor: pointer;
+}
+body.item .item-display .controls .align .align-btn.active {
+  color: white;
 }
 
 body.white-shirt.item .item-display {
@@ -979,8 +1019,22 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
     background-position: -20px 0;
   }
   body.item .item-display .item-container {
-    right: 47.5vw;
     top: 17.5vw;
+  }
+  body.item .item-display .item-container.align-right {
+    right: 47.5vw;
+    left: auto;
+    transform: none;
+  }
+  body.item .item-display .item-container.align-center {
+    left: 30%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  body.item .item-display .item-container.align-left {
+    left: 5vw;
+    right: auto;
+    transform: none;
   }
   body.item .item-display .item-container .words span {
     font-size: 4.2vw;
@@ -991,24 +1045,38 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
 }
 @media (orientation: portrait) and (max-width: 480px) {
   body.item .item-display {
-    margin: 40px 0 0 0;
-    background-size: 130%;
-    background-position: -130px 0;
+    margin: 0;
+    background-size: 165%;
+    background-position: 60% 0%;
   }
   body.item .item-display .item-container {
-    right: 35.5vw;
-    top: 28.5vw;
+    top: 42vw;
+  }
+  body.item .item-display .item-container.align-right {
+    right: 22vw;
+    left: auto;
+    transform: none;
+  }
+  body.item .item-display .item-container.align-center {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  body.item .item-display .item-container.align-left {
+    left: 8vw;
+    right: auto;
+    transform: none;
   }
   body.item .item-display .item-container .words span {
-    font-size: 7.2vw;
+    font-size: 8vw;
   }
   body.item .item-display .item-container .words h3 {
     font-size: 0.6vw;
   }
 }
 @media (orientation: portrait) and (max-width: 360px) {
-  body.item .item-display .item-container {
-    right: 46.5vw;
+  body.item .item-display .item-container.align-right {
+    right: 5vw;
   }
 }
 @media (max-width: 320px) {
