@@ -1044,14 +1044,14 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
 @media (orientation: portrait) and (max-width: 480px) {
   body.item .item-display {
     margin: 0;
-    background-size: 100%;
-    background-position: center top;
+    background-size: 115%;
+    background-position: 50% 0%;
   }
   body.item .item-display .item-container {
-    top: 22vw;
+    top: 26vw;
   }
   body.item .item-display .item-container.align-right {
-    right: 8vw;
+    right: 22vw;
     left: auto;
     transform: none;
   }
@@ -1061,7 +1061,7 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
     transform: translateX(-50%);
   }
   body.item .item-display .item-container.align-left {
-    left: 8vw;
+    left: 12vw;
     right: auto;
     transform: none;
   }
@@ -1074,7 +1074,7 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
 }
 @media (orientation: portrait) and (max-width: 360px) {
   body.item .item-display .item-container.align-right {
-    right: 5vw;
+    right: 22vw;
   }
 }
 @media (max-width: 320px) {
