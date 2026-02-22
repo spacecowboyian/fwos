@@ -38,10 +38,16 @@
                     <div class="controls">
                         <div class="controls-wrapper">
                             <div class="quantity">
-                                <input type="number" name="quantity" min="1" max="50" value="1">
+                                <select name="batch" data-target="batch-select">
+                                    <option value="small">Small (1–12)</option>
+                                    <option value="large">Large (13–50)</option>
+                                </select>
+                                <input type="number" name="quantity" min="1" max="12" value="1">
                             </div>
                             <div class="color">
-                                <input type="hidden" name="color" value="black"><span class="swatch_black" data-target="swatch-black">Black</span>
+                                <input type="hidden" name="color" value="black">
+                                <span class="swatch_black" data-target="swatch-black">Black</span>
+                                <span class="swatch_white" data-target="swatch-white">White</span>
                             </div>
                             <div class="sex">
                                 <select name="sex" id="">
@@ -94,12 +100,11 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         
-        <script src="bower_components/requirejs/require.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="scripts/item.js"></script>
         <!-- endbuild -->
 
         <!-- build:js scripts/plugins.js -->

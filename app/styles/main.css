@@ -1,17 +1,1031 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 11 | @import 'compass';
- *    |         ^^^^^^^^^
- *    '
- *   main.scss 11:9  root stylesheet */
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/**
+ * Profound Grid
+ * 
+ * Built in Sass (SCSS) this responsive/adaptive grid supports both fixed and fluid layouts, 
+ * relative and fixed gutters, as well as your choice of semantic markup or generic '.grid-x' classes.
+ * 
+ * The biggest difference to other grid systems is the use of negative margins for column
+ * placements, avoiding the subpixel rounding issues that usually break/uglify fluid layouts
+ * in some browsers.
+ * 
+ * Nested columns are supported too, without having to reset the grid on each level. 
+ *
+ * Credits/Inspiration:
+ * -------------------
+ * Semantic Grid: http://www.semantic.gs
+ * Susy: http://susy.oddbird.net
+ * Negative Grid: http://chrisplaneta.com/freebies/negativegrid-fluid-css-grid-by-chris-planeta/
+ *
+ * @author Profound Creative Studio
+ * @url http://www.profoundgrid.com
+ * @url http://www.weareprofound.com 
+ */
+/**
+ * Clearfix
+ */
+/**
+ * Legacy Clearfix
+ */
+/**
+ * Establish the grid-containing element.
+ */
+/**
+ * Align an element to the grid.
+ */
+/**
+ * Apply to any column to make it the last one of the current row.
+ */
+article {
+  width: 98%;
+  margin: 0 1%;
+  overflow: hidden;
+  *zoom: 1;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+#row1 div, #row2 div, #row3 div, #row4 div, #row5 div, #row6 div {
+  float: left;
+  margin-right: -100%;
+  width: 49.5%;
+}
+#row1 div:nth-child(2n+1), #row2 div:nth-child(2n+1), #row3 div:nth-child(2n+1), #row4 div:nth-child(2n+1), #row5 div:nth-child(2n+1), #row6 div:nth-child(2n+1) {
+  margin-left: 0%;
+  margin-bottom: 1%;
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+}
+#row1 div:nth-child(2n+2), #row2 div:nth-child(2n+2), #row3 div:nth-child(2n+2), #row4 div:nth-child(2n+2), #row5 div:nth-child(2n+2), #row6 div:nth-child(2n+2) {
+  margin-left: 50.5%;
+  margin-bottom: 1%;
+  clear: none;
+}
+
+#row5 div {
+  float: left;
+  margin-right: -100%;
+  width: 100%;
+}
+#row5 div:nth-child(1n+1) {
+  margin-left: 0%;
+  margin-bottom: 1%;
+  clear: both;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+@media screen and (min-width: 720px) {
+  article {
+    width: 98%;
+    margin: 0 1%;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row1 div {
+    float: left;
+    margin-right: -100%;
+    width: 15.83%;
+  }
+  #row1 div:nth-child(6n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row1 div:nth-child(6n+2) {
+    margin-left: 16.83%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(6n+3) {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(6n+4) {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(6n+5) {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(6n+6) {
+    margin-left: 84.17%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row2 div {
+    float: left;
+    margin-right: -100%;
+    width: 32.67%;
+  }
+  #row2 div:nth-child(3n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row2 div:nth-child(3n+2) {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row2 div:nth-child(3n+3) {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row3 div {
+    float: left;
+    margin-right: -100%;
+    width: 32.67%;
+  }
+  #row3 div:nth-child(3n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row3 div:nth-child(3n+2) {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row3 div:nth-child(3n+3) {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row3 div.last {
+    float: left;
+    margin-right: -100%;
+    width: 100%;
+  }
+  #row4 div {
+    float: left;
+    margin-right: -100%;
+    width: 32.67%;
+  }
+  #row4 div:nth-child(3n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row4 div:nth-child(3n+2) {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row4 div:nth-child(3n+3) {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row5 div {
+    float: left;
+    margin-right: -100%;
+    width: 100%;
+  }
+  #row5 div:nth-child(1n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row6 div {
+    float: left;
+    margin-right: -100%;
+    width: 100%;
+  }
+}
+@media all and (min-width: 960px) {
+  article {
+    width: 98%;
+    margin: 0 1%;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row1 div {
+    float: left;
+    margin-right: -100%;
+    width: 7.42%;
+  }
+  #row1 div:nth-child(12n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row1 div:nth-child(12n+2) {
+    margin-left: 8.42%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+3) {
+    margin-left: 16.83%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+4) {
+    margin-left: 25.25%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+5) {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+6) {
+    margin-left: 42.08%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+7) {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+8) {
+    margin-left: 58.92%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+9) {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+10) {
+    margin-left: 75.75%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+11) {
+    margin-left: 84.17%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row1 div:nth-child(12n+12) {
+    margin-left: 92.58%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row2 div {
+    float: left;
+    margin-right: -100%;
+    width: 15.83%;
+  }
+  #row2 div:nth-child(6n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row2 div:nth-child(6n+2) {
+    margin-left: 16.83%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row2 div:nth-child(6n+3) {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row2 div:nth-child(6n+4) {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row2 div:nth-child(6n+5) {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row2 div:nth-child(6n+6) {
+    margin-left: 84.17%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row3 div {
+    float: left;
+    margin-right: -100%;
+    width: 24.25%;
+  }
+  #row3 div.last {
+    float: left;
+    margin-right: -100%;
+    width: 24.25%;
+  }
+  #row3 div:nth-child(4n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row3 div:nth-child(4n+2) {
+    margin-left: 25.25%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row3 div:nth-child(4n+3) {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row3 div:nth-child(4n+4) {
+    margin-left: 75.75%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row4 div {
+    float: left;
+    margin-right: -100%;
+    width: 32.67%;
+  }
+  #row4 div:nth-child(3n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row4 div:nth-child(3n+2) {
+    margin-left: 33.67%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row4 div:nth-child(3n+3) {
+    margin-left: 67.33%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row5 div {
+    float: left;
+    margin-right: -100%;
+    width: 49.5%;
+  }
+  #row5 div:nth-child(2n+1) {
+    margin-left: 0%;
+    margin-bottom: 1%;
+    clear: both;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  #row5 div:nth-child(2n+2) {
+    margin-left: 50.5%;
+    margin-bottom: 1%;
+    clear: none;
+  }
+  #row6 div {
+    float: left;
+    margin-right: -100%;
+    width: 100%;
+  }
+}
+/* stopping silly sass highlighting */
+.icons-sprite,
+.icons-facebook-16,
+.btn-sign-in i.icon-fb-white,
+.icons-facebook-24,
+[class*=btn-signin].btn-signin-facebook .icon,
+.icons-twitter-16,
+.btn-sign-in i.icon-tw-white,
+.icons-twitter-24,
+[class*=btn-signin].btn-signin-twitter .icon {
+  background-image: url(../images/generated/icons-sba535d4298.png);
+  background-repeat: no-repeat;
+}
+
+.icons-facebook-16, .btn-sign-in i.icon-fb-white {
+  background-position: 0 0;
+  width: 16px;
+  height: 16px;
+}
+
+.icons-facebook-24, [class*=btn-signin].btn-signin-facebook .icon {
+  background-position: 0 -36px;
+  width: 24px;
+  height: 24px;
+}
+
+.icons-twitter-16, .btn-sign-in i.icon-tw-white {
+  background-position: 0 -80px;
+  width: 16px;
+  height: 16px;
+}
+
+.icons-twitter-24, [class*=btn-signin].btn-signin-twitter .icon {
+  background-position: 0 -116px;
+  width: 24px;
+  height: 24px;
+}
+
+section.login-container {
+  background: white;
+  width: 320px;
+  margin: 0 auto;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  padding: 30px;
+}
+section.login-container h1 {
+  font-size: 20px;
+}
+section.login-container .quiet {
+  margin-top: 20px;
+}
+
+[class*=btn-signin] {
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 11 \2502  @import 'compass';\a    \2502          ^^^^^^^^^\a    \2575 \a   main.scss 11:9  root stylesheet";
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid rgba(20, 20, 20, 0.2);
+  width: 230px;
+  color: white;
+  background: #ccc;
+  overflow: hidden;
+  margin: 10px auto;
+  -webkit-box-shadow: -2px -2px 7px rgba(20, 20, 20, 0.1) inset;
+  box-shadow: -2px -2px 7px rgba(20, 20, 20, 0.1) inset;
+  text-align: left;
+}
+[class*=btn-signin] .icon, [class*=btn-signin] .text {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+[class*=btn-signin] .icon {
+  float: left;
+  width: 35px;
+  height: 35px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+[class*=btn-signin] .text {
+  float: left;
+  border-left: 1px solid rgba(20, 20, 20, 0.1);
+  padding: 10px 15px;
+  font-size: 12px;
+  width: 163px;
+}
+[class*=btn-signin]:hover .icon, [class*=btn-signin]:hover .text {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+[class*=btn-signin].btn-signin-facebook {
+  background: #3b5998;
+}
+[class*=btn-signin].btn-signin-facebook .icon {
+  background-position: 5px -30px;
+}
+[class*=btn-signin].btn-signin-twitter {
+  background: #00acee;
+}
+[class*=btn-signin].btn-signin-twitter .icon {
+  background-position: 6px -111px;
+}
+
+.shirtBlock, article.shirts div, .sotm .shirt {
+  background: rgb(20, 20, 20);
+  color: white;
+  border: 5px solid white;
+  border-bottom: none;
+  text-align: right;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  margin: 0;
+  background: white;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+*.hide {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(20, 20, 20);
+  border-bottom: 1px solid rgb(20, 20, 20);
+}
+
+input:active, input:focus, select:active, select:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+button, .btn-sign-in, a.btn {
+  display: inline-block;
+  background: green;
+  border: none;
+  padding: 10px;
+  color: white;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+button.neg, .neg.btn-sign-in, a.neg.btn {
+  background: red;
+}
+
+.quiet {
+  color: rgba(20, 20, 20, 0.3);
+}
+
+#lean_overlay {
+  position: fixed;
+  z-index: 1003;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none;
+}
+
+.modal {
+  border: 5px solid rgb(20, 20, 20);
+}
+.modal .modal-close {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  display: block;
+  font-size: 14px;
+  background: rgb(20, 20, 20);
+  color: white;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-bottom: none;
+}
+
+h1.logo {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.3em;
+  margin: 0;
+  width: 100px;
+  line-height: 0.85em;
+}
+h1.logo a {
+  border-bottom: none;
+}
+
+nav {
+  background: rgb(20, 20, 20);
+}
+nav ul {
+  padding: 5px;
+  margin: 0;
+  overflow: hidden;
+}
+nav ul li {
+  list-style: none;
+  float: left;
+  margin: 0 5px;
+}
+nav ul li a {
+  border: none;
+  display: block;
+  padding: 5px;
+  background: white;
+}
+
+.btn-sign-in {
+  background: rgba(20, 20, 20, 0.5);
+  position: absolute;
+  right: 0;
+  margin: 10px 25px 0 0;
+  z-index: 9999;
+}
+.btn-sign-in i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  margin: 0 0 0 3px;
+}
+.btn-sign-in i.icon-tw-white {
+  background-position: 0 -78px;
+}
+.btn-sign-in i.icon-fb-white {
+  background-position: 0 1px;
+}
+
+.user-info {
+  float: right;
+  margin: 10px 20px 0 0;
+  border-bottom: none;
+  display: block;
+  line-height: 15px;
+}
+.user-info .avatar {
+  width: 30px;
+  float: left;
+}
+.user-info span {
+  display: block;
+  float: left;
+  padding: 8px 10px 0 0;
+  font-size: 12px;
+}
+
+.container {
+  margin-left: 330px;
+  padding: 0 10px;
+}
+
+header {
+  padding: 0 10px;
+}
+header h1 {
+  font-size: 3em;
+  line-height: 1em;
+  text-align: right;
+  margin: 10px 0;
+}
+
+section {
+  padding: 0 10px;
+}
+section h2 {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.creator, body.item .item-display {
+  background-image: url("../images/shirt-blank-black.png");
+  background-size: 700px auto;
+  background-position: -220px 0;
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 500px;
+  margin: 0;
+  position: fixed;
+  top: 10px;
+  z-index: -3;
+}
+
+.shirt-form {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  width: 270px;
+  top: 160px;
+}
+.shirt-form .start {
+  color: green;
+  border-bottom: 0;
+  display: block;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 9px;
+}
+.shirt-form .start:after {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid green;
+  border-top: 5px solid transparent;
+  height: 0;
+  width: 0;
+}
+.shirt-form input[type=text] {
+  display: block;
+  width: 260px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 50px;
+  height: 56px;
+  margin-top: -11px;
+  margin-right: -10px;
+  margin-left: 10px;
+  background: none;
+  text-align: right;
+  vertical-align: middle;
+  padding: 0 10px 0 0;
+  color: white;
+}
+.shirt-form input[type=text]:active, .shirt-form input[type=text]:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  color: white;
+}
+.shirt-form input[type=text]:active::placeholder, .shirt-form input[type=text]:focus::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+.shirt-form input[type=text]::placeholder {
+  color: white;
+}
+.shirt-form.small-text input {
+  font-size: 34px;
+  line-height: 34px;
+  height: 40px;
+}
+.shirt-form button, .shirt-form a.btn, .shirt-form .btn-sign-in {
+  float: right;
+}
+
+.sotm {
+  margin-top: 20px;
+}
+.sotm .shirt {
+  font-size: 80px;
+  line-height: 65px;
+  padding: 50px 0;
+  -webkit-box-shadow: 2px 2px 10px rgba(20, 20, 20, 0.4);
+  box-shadow: 2px 2px 10px rgba(20, 20, 20, 0.4);
+}
+.sotm .shirt p {
+  margin: 0 0 0 0;
+  padding: 0 20px;
+}
+
+article.shirts div {
+  margin: 0;
+}
+article.shirts div a {
+  display: block;
+  color: white;
+  padding: 15px 0;
+  font-size: 20px;
+}
+article.shirts div p {
+  margin: 0 0 0 0;
+  padding: 0 10px;
+}
+
+footer {
+  background: rgba(20, 20, 20, 0.04);
+  padding: 20px;
+  text-align: right;
+  margin-top: 0;
+  font-size: 12px;
+}
+
+@media all and (max-width: 720px) {
+  .btn-sign-in {
+    margin-right: 15px;
+  }
+  .container {
+    margin-left: 0;
+    padding: 0;
+  }
+  .creator, body.item .item-display, .shirt-form, nav {
+    display: none;
+  }
+}
+@media all and (min-width: 960px) {
+  header h1 {
+    font-size: 4em;
+  }
+}
+body.item {
+  overflow: hidden;
+}
+body.item .container {
+  margin: 0;
+  padding: 0;
+  max-width: auto;
+  min-width: 320px;
+}
+body.item .item-display {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-size: 120%;
+  background-position: 55% 5%;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 0;
+}
+body.item .item-display .item-container {
+  position: absolute;
+  right: 23.5vw;
+  top: 22.3vw;
+}
+body.item .item-display .item-container .words {
+  color: white;
+  text-align: right;
+}
+body.item .item-display .item-container .words h2 {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+body.item .item-display .item-container .words h3 {
+  margin: 1px 0 0 0;
+  padding: 0;
+  background: none;
+  font-size: 0.6vw;
+}
+body.item .item-display .item-container .words span {
+  display: block;
+  font-size: 6.2vw;
+  line-height: 0.9em;
+}
+body.item .item-display .item-container .words span.hide {
+  display: none;
+}
+body.item .item-display .item-container .words span.domain {
+  font-size: 5px;
+  line-height: 2em;
+}
+body.item .item-display .item-container .controls {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgb(20, 20, 20);
+  z-index: 9999;
+}
+body.item .item-display .item-container .controls .controls-wrapper {
+  text-align: center;
+  margin: 0 auto;
+}
+body.item .item-display .item-container .controls .controls-wrapper div {
+  display: inline-block;
+}
+body.item .item-display .item-container .controls .controls-wrapper input, body.item .item-display .item-container .controls .controls-wrapper select {
+  border: 0;
+  padding: 15px 10px 14px 10px;
+  font-size: 1em;
+  margin: 0;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  text-align: center;
+}
+body.item .item-display .item-container .controls .quantity select {
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(20, 20, 20);
+  width: auto;
+  padding: 15px 8px 14px 8px;
+}
+body.item .item-display .item-container .controls .quantity input {
+  width: 35px;
+  padding-left: 17px;
+  padding-right: 2px;
+  text-align: center;
+}
+body.item .item-display .item-container .controls .color input {
+  display: none;
+}
+body.item .item-display .item-container .controls .color .swatch, body.item .item-display .item-container .controls .color .swatch_black, body.item .item-display .item-container .controls .color .swatch_white {
+  display: inline-block;
+  padding: 0 10px;
+  height: 42px;
+  line-height: 43px;
+  background: rgb(20, 20, 20);
+  color: white;
+  border: 3px solid transparent;
+  font-size: 1em;
+}
+body.item .item-display .item-container .controls .color .swatch_black, body.item .item-display .item-container .controls .color .swatch_white {
+  cursor: pointer;
+}
+body.item .item-display .item-container .controls .color .swatch_white {
+  background: white;
+  color: rgb(20, 20, 20);
+}
+body.item .item-display .item-container .controls .color .swatch_black.active {
+  border-color: white;
+}
+body.item .item-display .item-container .controls .color .swatch_white.active {
+  border-color: rgb(20, 20, 20);
+}
+body.item .item-display .item-container .controls .size select {
+  width: 100px;
+  background: rgba(255, 255, 255, 0.5);
+}
+body.item .item-display .item-container .controls .size select.active {
+  background: white;
+}
+body.item .item-display .item-container .controls .btn.buy {
+  text-align: center;
+  font-size: 1em;
+  height: 28px;
+  line-height: 29px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(20, 20, 20);
+}
+body.item .item-display .item-container .controls .btn.buy.active {
+  color: white;
+  background: green;
+}
+
+body.white-shirt.item .item-display {
+  background-image: url("../images/shirt-blank-white.png");
+}
+body.white-shirt.item .item-display .words {
+  color: rgb(20, 20, 20);
+}
+body.white-shirt.item .item-display .words h3 {
+  color: rgb(20, 20, 20);
+}
+body.white-shirt.item .item-display .controls {
+  background: white;
+}
+body.white-shirt.item .item-display .controls input, body.white-shirt.item .item-display .controls select {
+  color: rgb(20, 20, 20);
+}
+
+@media all and (max-width: 720px) {
+  body.item .item-display {
+    display: block;
+  }
+}
+@media (orientation: landscape) and (max-width: 640px) {
+  body.item .item-display {
+    margin: -10px 0 0 0px;
+    background-size: 80%;
+    background-position: -20px 0;
+  }
+  body.item .item-display .item-container {
+    right: 47.5vw;
+    top: 17.5vw;
+  }
+  body.item .item-display .item-container .words span {
+    font-size: 4.2vw;
+  }
+  body.item .item-display .item-container .words h3 {
+    font-size: 0.35vw;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px) {
+  body.item .item-display {
+    margin: 40px 0 0 0;
+    background-size: 130%;
+    background-position: -130px 0;
+  }
+  body.item .item-display .item-container {
+    right: 35.5vw;
+    top: 28.5vw;
+  }
+  body.item .item-display .item-container .words span {
+    font-size: 7.2vw;
+  }
+  body.item .item-display .item-container .words h3 {
+    font-size: 0.6vw;
+  }
+}
+@media (orientation: portrait) and (max-width: 360px) {
+  body.item .item-display .item-container {
+    right: 46.5vw;
+  }
+}
+@media (max-width: 320px) {
+  body.item {
+    overflow: auto;
+  }
+  body.item .item-display {
+    width: 320px;
+    position: relative;
+  }
+  body.item .item-display .item-container {
+    right: 150px;
+    top: 95px;
+  }
+  body.item .item-display .item-container .words span {
+    font-size: 1em;
+  }
 }
