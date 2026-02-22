@@ -593,6 +593,7 @@ h1.logo {
   margin: 0;
   width: 100px;
   line-height: 0.85em;
+  z-index: 10;
 }
 h1.logo a {
   border-bottom: none;
@@ -1043,14 +1044,14 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
 @media (orientation: portrait) and (max-width: 480px) {
   body.item .item-display {
     margin: 0;
-    background-size: 165%;
-    background-position: 60% 0%;
+    background-size: 100%;
+    background-position: center top;
   }
   body.item .item-display .item-container {
-    top: 30vw;
+    top: 22vw;
   }
   body.item .item-display .item-container.align-right {
-    right: 22vw;
+    right: 8vw;
     left: auto;
     transform: none;
   }
