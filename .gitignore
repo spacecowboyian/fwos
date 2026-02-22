@@ -8,3 +8,5 @@ npm-debug.log
 /bower_components/
 bower_components/
 app/bower_components/**
+.next/
+out/

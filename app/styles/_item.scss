@@ -88,6 +88,12 @@ body.item{
 
 				}
 				.quantity{
+					select{
+						background:$halfWhite;
+						color:$black;
+						width:auto;
+						padding:15px 8px 14px 8px;
+					}
 					input{
 						width:35px;
 						padding-left:17px;
@@ -113,11 +119,20 @@ body.item{
 
 					.swatch_black,.swatch_white{
 						@extend .swatch;
+						cursor: pointer;
 					}
 
 					.swatch_white{
 						background:$white;
 						color:$black;
+					}
+
+					.swatch_black.active{
+						border-color: $white;
+					}
+
+					.swatch_white.active{
+						border-color: $black;
 					}
 				}
 				.size{
@@ -145,6 +160,20 @@ body.item{
 					}
 				}
 			}
+		}
+	}
+}
+
+body.white-shirt.item {
+	.item-display {
+		background-image: url('../images/shirt-blank-white.png');
+		.words {
+			color: $black;
+			h3 { color: $black; }
+		}
+		.controls {
+			background: $white;
+			input, select { color: $black; }
 		}
 	}
 }

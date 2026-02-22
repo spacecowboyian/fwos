@@ -12,8 +12,7 @@ $almostWhite: rgba($black,.04);
 @import 'responsive';
 @import 'mixins/triangle';
 
-$icons-spacing: 20px;
-@import 'icons/*.png';
+@import 'icons-sprites';
 /* stopping silly sass highlighting */
 @include all-icons-sprites;
 
