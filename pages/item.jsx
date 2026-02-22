@@ -15,6 +15,13 @@ export default function Item() {
   const [size, setSize] = useState('');
   const [alignment, setAlignment] = useState('right');
 
+  const ALIGNMENTS = ['right', 'left', 'center'];
+  const ALIGN_ICONS = { right: 'fa-align-right', left: 'fa-align-left', center: 'fa-align-center' };
+  function cycleAlignment() {
+    const idx = ALIGNMENTS.indexOf(alignment);
+    setAlignment(ALIGNMENTS[(idx + 1) % ALIGNMENTS.length]);
+  }
+
   // Apply body classes for CSS styling
   useEffect(() => {
     document.body.classList.add('item');
@@ -83,27 +90,11 @@ export default function Item() {
                 <div className="align">
                   <button
                     type="button"
-                    className={`align-btn${alignment === 'left' ? ' active' : ''}`}
-                    onClick={() => setAlignment('left')}
-                    title="Align left"
+                    className="align-btn"
+                    onClick={cycleAlignment}
+                    title="Cycle text alignment"
                   >
-                    <i className="fa-solid fa-align-left"></i>
-                  </button>
-                  <button
-                    type="button"
-                    className={`align-btn${alignment === 'center' ? ' active' : ''}`}
-                    onClick={() => setAlignment('center')}
-                    title="Align center"
-                  >
-                    <i className="fa-solid fa-align-center"></i>
-                  </button>
-                  <button
-                    type="button"
-                    className={`align-btn${alignment === 'right' ? ' active' : ''}`}
-                    onClick={() => setAlignment('right')}
-                    title="Align right"
-                  >
-                    <i className="fa-solid fa-align-right"></i>
+                    <i className={`fa-solid ${ALIGN_ICONS[alignment]}`}></i>
                   </button>
                 </div>
 
