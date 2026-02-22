@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import Head from 'next/head';
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';

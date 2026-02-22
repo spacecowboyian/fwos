@@ -13,6 +13,14 @@ export default function Item() {
   const [batch, setBatch] = useState('small');
   const [quantity, setQuantity] = useState(1);
   const [size, setSize] = useState('');
+  const [alignment, setAlignment] = useState('right');
+
+  const ALIGNMENTS = ['right', 'left', 'center'];
+  const ALIGN_ICONS = { right: 'fa-align-right', left: 'fa-align-left', center: 'fa-align-center' };
+  function cycleAlignment() {
+    const idx = ALIGNMENTS.indexOf(alignment);
+    setAlignment(ALIGNMENTS[(idx + 1) % ALIGNMENTS.length]);
+  }
 
   // Apply body classes for CSS styling
   useEffect(() => {
@@ -65,7 +73,7 @@ export default function Item() {
           className="item-display"
           style={{ backgroundImage: shirtBg }}
         >
-          <div className="item-container">
+          <div className={`item-container align-${alignment}`}>
             <div className="words">
               <h2>
                 <span>{w1}</span>
@@ -75,9 +83,21 @@ export default function Item() {
               </h2>
               <h3>fourwordsonshirts.com</h3>
             </div>
+          </div>
 
-            <div className="controls">
+          <div className="controls">
               <div className="controls-wrapper">
+                <div className="align">
+                  <button
+                    type="button"
+                    className="align-btn"
+                    onClick={cycleAlignment}
+                    title="Cycle text alignment"
+                  >
+                    <i className={`fa-solid ${ALIGN_ICONS[alignment]}`}></i>
+                  </button>
+                </div>
+
                 <div className="quantity">
                   <select
                     name="batch"
@@ -146,7 +166,6 @@ export default function Item() {
                 </div>
               </div>
             </div>
-          </div>
         </section>
       </div>
     </>
