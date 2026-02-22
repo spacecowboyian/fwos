@@ -817,6 +817,12 @@ footer {
 }
 body.item {
   overflow: hidden;
+  transition: background-color 0.2s ease;
+  --shirt-art-scale: 1;
+  --shirt-text-scale: 1.2;
+  --shirt-bg-base-size: 150%;
+  --shirt-word-base-size: 6.2vw;
+  --shirt-domain-base-size: 0.6vw;
 }
 body.item .container {
   margin: 0;
@@ -826,11 +832,11 @@ body.item .container {
 }
 body.item .item-display {
   position: absolute;
-  top: 0;
+  top: 10%;
   bottom: 0;
   width: 100%;
-  background-size: 120%;
-  background-position: 55% 5%;
+  background-size: calc(var(--shirt-bg-base-size) * var(--shirt-art-scale));
+  background-position: 95% 5%;
   margin: 0 auto;
   overflow: hidden;
   z-index: 0;
@@ -838,10 +844,10 @@ body.item .item-display {
 body.item .item-display .item-container {
   position: absolute;
   right: 23.5vw;
-  top: 22.3vw;
+  top: 28.3vw;
 }
 body.item .item-display .item-container.align-right {
-  right: 23.5vw;
+  right: 40.5vw;
   left: auto;
   transform: none;
 }
@@ -877,11 +883,11 @@ body.item .item-display .item-container .words h3 {
   margin: 1px 0 0 0;
   padding: 0;
   background: none;
-  font-size: 0.6vw;
+  font-size: clamp(0.24rem, calc(var(--shirt-domain-base-size) * var(--shirt-art-scale) * var(--shirt-text-scale)), 0.78rem);
 }
 body.item .item-display .item-container .words span {
   display: block;
-  font-size: 6.2vw;
+  font-size: clamp(2.16rem, calc(var(--shirt-word-base-size) * var(--shirt-art-scale) * var(--shirt-text-scale)), 7.92rem);
   line-height: 0.9em;
 }
 body.item .item-display .item-container .words span.hide {
@@ -895,7 +901,7 @@ body.item .item-display .controls {
   overflow: hidden;
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 23px;
   width: 100%;
   background: rgb(20, 20, 20);
   z-index: 9999;
@@ -990,6 +996,15 @@ body.item .item-display .controls .align .align-btn {
   cursor: pointer;
 }
 
+body.white-shirt.item {
+  background: rgb(20, 20, 20);
+}
+body.white-shirt.item h1.logo a {
+  color: white;
+}
+h1.logo a {
+  transition: color 0.2s ease;
+}
 body.white-shirt.item .item-display {
 }
 body.white-shirt.item .item-display .words {
@@ -1011,9 +1026,11 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
   }
 }
 @media (orientation: landscape) and (max-width: 640px) {
+  body.item {
+    --shirt-art-scale: 0.54;
+  }
   body.item .item-display {
     margin: -10px 0 0 0px;
-    background-size: 80%;
     background-position: -20px 0;
   }
   body.item .item-display .item-container {
@@ -1034,24 +1051,20 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
     right: auto;
     transform: none;
   }
-  body.item .item-display .item-container .words span {
-    font-size: 4.2vw;
-  }
-  body.item .item-display .item-container .words h3 {
-    font-size: 0.35vw;
-  }
 }
 @media (orientation: portrait) and (max-width: 480px) {
+  body.item {
+    --shirt-art-scale: 1.37;
+  }
   body.item .item-display {
     margin: 0;
-    background-size: 115%;
-    background-position: 50% 0%;
+    background-position: 80% 0;
   }
   body.item .item-display .item-container {
-    top: 26vw;
+    top: 46vw;
   }
   body.item .item-display .item-container.align-right {
-    right: 22vw;
+    right: 36vw;
     left: auto;
     transform: none;
   }
@@ -1065,19 +1078,22 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
     right: auto;
     transform: none;
   }
-  body.item .item-display .item-container .words span {
-    font-size: 8vw;
-  }
-  body.item .item-display .item-container .words h3 {
-    font-size: 0.6vw;
-  }
 }
 @media (orientation: portrait) and (max-width: 360px) {
+  body.item {
+    --shirt-art-scale: 1.25;
+  }
+  body.item .item-display .item-container {
+    top: 48vw;
+  }
   body.item .item-display .item-container.align-right {
-    right: 22vw;
+    right: 30vw;
   }
 }
 @media (max-width: 320px) {
+  body.item {
+    --shirt-art-scale: 1.1;
+  }
   body.item {
     overflow: auto;
   }
@@ -1088,8 +1104,5 @@ body.white-shirt.item .item-display .controls input, body.white-shirt.item .item
   body.item .item-display .item-container {
     right: 150px;
     top: 95px;
-  }
-  body.item .item-display .item-container .words span {
-    font-size: 1em;
   }
 }
